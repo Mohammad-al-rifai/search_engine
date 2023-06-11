@@ -6,6 +6,7 @@ import 'package:search_engine_app/presentations/resourses/color_manager.dart';
 
 import '../components/text_form_field.dart';
 import '../components/values_manager.dart';
+import '../home/widgets/search_item_widget.dart';
 
 class Search1Screen extends StatefulWidget {
   const Search1Screen({super.key});
@@ -84,30 +85,6 @@ class _Search1ScreenState extends State<Search1Screen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget buildSearchItem({required SearchData data}) {
-    return Container(
-      margin: const EdgeInsetsDirectional.all(AppMargin.m8),
-      padding: const EdgeInsetsDirectional.all(AppPadding.p8),
-      decoration: BoxDecoration(
-        color: ColorManager.white,
-        borderRadius: BorderRadiusDirectional.circular(AppSize.s8),
-        boxShadow: const [
-          BoxShadow(
-            color: ColorManager.grey,
-            blurRadius: 2.0,
-          ),
-        ],
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          PairWidget(label: 'Title', value: data.title),
-          PairWidget(label: 'Abstract', value: data.abstract),
-        ],
       ),
     );
   }
